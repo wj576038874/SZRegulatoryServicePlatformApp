@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <RadioGroup
+        android:id="@+id/pop_taskrd"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:textSize="15sp"
+            android:id="@+id/rd1"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="全部任务"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B2B2B2"
+            />
+        <RadioButton
+            android:textSize="15sp"
+            android:id="@+id/rd2"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="未接受"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B2B2B2"
+            />
+        <RadioButton
+            android:textSize="15sp"
+            android:id="@+id/rd3"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="已接收"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B2B2B2"
+            />
+        <RadioButton
+            android:id="@+id/rd4"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="可接受"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B2B2B2"
+            />
+        <RadioButton
+            android:textSize="15sp"
+            android:id="@+id/rd5"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="未完成"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B2B2B2"
+            />
+        <RadioButton
+            android:textSize="15sp"
+            android:id="@+id/rd6"
+            android:textColor="@color/color_radiobutton"
+            android:gravity="center"
+            android:text="进行中"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

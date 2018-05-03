@@ -1,0 +1,608 @@
+<resources>
+    <string name="app_name">深圳监管服务</string>
+    <string name="table_xqdc_check_hint">(合格  \"√\"，不合格  \"×\"，不适用  \"-\")</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="dxshcjcb_jiansu">注：1.根据检查情况在对应栏中划“√”，对于勾选“No”的应将缺陷记入检查报告。
+ \n\u3000\u30002.此表作为专项检查的参考资料，不必向船舶签发，实施检查的单位留存。</string>
+
+
+    <string name="menu_settings">设置</string>
+    <string name="button_print">打印</string>
+    <string name="button_printer_settings">打印机设置</string>
+    <string name="button_update_firm">更新固件</string>
+    <string name="button_transfer_template">传输模板</string>
+    <string name="button_get_firmver">获取固件版本</string>
+    <string name="button_get_mediaver">获取媒体版本</string>
+    <string name="button_get_serialnum">获取序列号</string>
+    <string name="button_send_mediainfo">发送媒体信息</string>
+    <string name="button_check_firm_file">检查固件文件版本</string>
+    <string name="button_check_media_file">检查媒体文件版本</string>
+    <string name="button_remove_template">删除模板</string>
+    <string name="button_select_file">选择文件</string>
+    <string name="button_select">选择</string>
+    <string name="button_add">添加</string>
+    <string name="button_delete">删除</string>
+    <string name="button_get_list">获取列表</string>
+    <string name="button_bluetooth_settings">蓝牙设置</string>
+    <string name="button_network_settings">网络设置</string>
+    <string name="button_device_settings">设备设置</string>
+    <string name="supported_device">PJ-7XX/RJ-4030Ai/RJ-2XXX</string>
+    <string name="mw_series">MW系列</string>
+    <string name="file_explorer_title">文件资源管理器</string>
+    <string name="button_printer_status">打印机状态</string>
+    <string name="button_send_binfile">发送文件</string>
+    <string name="text_select_pdz">选择一个pdz或blf文件</string>
+    <string name="text_transfer">传输</string>
+    <string name="text_select_image">选择图像/打印文件</string>
+    <string name="text_input_data">输入数据：</string>
+    <string name="text_template_Index">索引：</string>
+    <string name="text_template_name">名称：</string>
+    <string name="text_template_text">文本：</string>
+    <string name="text_template_key">模板秘钥:</string>
+    <string name="text_template_replace_texts">替换文本：</string>
+    <string name="text_select_pdf">选择pdf文件</string>
+    <string name="text_pdf_pages_start">起始页：</string>
+    <string name="text_pdf_pages_end">结束页：</string>
+    <string name="chkbox_multiple_select">多选</string>
+    <string name="chkbox_all_pages">所有页面</string>
+    <string name="text_print_image">打印图像/ 打印文件</string>
+    <string name="text_print_pdf">打印Pdf文件</string>
+    <string name="text_print_template">打印模板</string>
+    <string name="text_transfer_manager">管理模板</string>
+    <string name="text_transfer_pdz">传输模板文件</string>
+    <string name="text_device_setting">设备设置</string>
+    <string name="text_remove_template">删除模板文件</string>
+    <string name="text_not_exit_template">模板不存在.</string>
+    <string name="unable_access">无法访问…</string>
+    <string name="no_network_device">未找到网络打印机</string>
+    <string name="setting_printer">基本设置</string>
+    <string name="setting_alignment">设置 Alignment</string>
+    <string name="setting_PJ">设置PocketJet参数</string>
+    <string name="printer_title">打印机</string>
+    <string name="printer_text">选择目标打印机</string>
+    <string name="setting_label">设置</string>
+    <string name="about_label">关于</string>
+    <string name="about_title">Brother打印Sdk演示</string>
+    <string name="about_text">Ver.3.0.7\n© 2016 Brother Industries, Ltd.\n</string>
+    <string name="netPrinterListTitle_label">网络打印机</string>
+    <string name="progress_dialog_message_preparing_connection">准备连接...</string>
+    <string name="progress_dialog_message_createData">创建数据</string>
+    <string name="progress_dialog_message_sendingData">发送数据...</string>
+    <string name="progress_dialog_message_sendingPrintingData">发送数据...</string>
+    <string name="progress_dialog_message_startPrint">打印数据 </string>
+    <string name="progress_dialog_message_dataSent">数据已发送 </string>
+    <string name="progress_dialog_message_printed">打印过程已完成 </string>
+    <string name="progress_dialog_message_close_connection">关闭连接</string>
+    <string name="progress_dialog_message_set_paper">请设置纸张</string>
+    <string name="progress_dialog_message_cooling_start">打印机冷却开始</string>
+    <string name="progress_dialog_message_cooling_end">打印机冷却结束</string>
+    <string name="progress_dialog_message_waiting_peel">等待剥皮标签</string>
+    <string name="progress_dialog_message_sending_template">文件传输</string>
+    <string name="progress_dialog_message_getting_bluetooth_setting">获取蓝牙设置 </string>
+    <string name="progress_dialog_message_setting_bluetooth_setting">传送蓝牙设置 </string>
+    <string name="progress_dialog_message_removing_template">删除模板 </string>
+    <string name="progress_dialog_message_getting_template">获取模板列表 </string>
+    <string name="error_message_none">成功</string>
+    <string name="error_message_runtime">运行时错误 </string>
+    <string name="printer_model_title">打印机型号</string>
+    <string name="printer_model_value">选择打印机型号 </string>
+    <string name="error_message_weong_os">Android操作系统不支持</string>
+    <string name="error_message_no_usb">找不到USB设备</string>
+    <string name="port_title">端口</string>
+    <string name="port_value">选择端口</string>
+    <string name="address_title">IP地址</string>
+    <string name="address_value">设置IP地址的个数</string>
+    <string name="mac_address_title">MAC地址</string>
+    <string name="mac_address_value">设置MAC地址的个数 </string>
+    <string name="paper_size_title">纸张大小</string>
+    <string name="paper_size_value">选择纸张尺寸 </string>
+    <string name="orientation_title">打印方向</string>
+    <string name="orientation_value">选择打印方向 </string>
+    <string name="trim_tape_after_data_title">切零线 </string>
+    <string name="trim_tape_after_data_value">选择切割零线</string>
+
+
+    <string-array name="orientation">
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+    <string-array name="orientation_values">
+        <item>PORTRAIT</item>
+        <item>LANDSCAPE</item>
+    </string-array>
+
+    <string name="number_of_copies_title">份数</string>
+    <string name="number_of_copies_value">设置份数 </string>
+    <string name="halftoning_title">半色调</string>
+    <string name="halftoning_value">选择半色调方法 </string>
+    <string name="image_thresholding_title">简单二进制阈值</string>
+    <string name="image_thresholding_value">选择阈值 </string>
+    <string name="scale_value_title">缩放值</string>
+    <string name="scale_value_value">选择缩放值 </string>
+
+
+    <string-array name="halfToning">
+        <item>Threshold</item>
+        <item>Pattern dithering</item>
+        <item>Error diffusion</item>
+    </string-array>
+    <string-array name="halfToningValues">
+        <item>THRESHOLD</item>
+        <item>PATTERNDITHER</item>
+        <item>ERRORDIFFUSION</item>
+    </string-array>
+
+    <string name="fit_to_page_title">Fit to page</string>
+    <string name="fit_to_page_value">Select if fitting to page </string>
+
+
+    <string-array name="check_print_end">
+        <item>Not check</item>
+        <item>Skip last page</item>
+        <item>Check</item>
+    </string-array>
+    <string-array name="check_print_end_values">
+        <item>CPE_NO_CHECK</item>
+        <item>CPE_SKIP_LAST</item>
+        <item>CPE_CHECK</item>
+    </string-array>
+    <string-array name="fitToPage">
+        <item>ORIGINAL</item>
+        <item>FIT_TO_PAGE</item>
+        <item>CUSTOM</item>
+        <item>FIT_TO_PAPER</item>
+    </string-array>
+    <string-array name="fit_to_page_values">
+        <item>ORIGINAL</item>
+        <item>FIT_TO_PAGE</item>
+        <item>SCALE</item>
+        <item>FIT_TO_PAPER</item>
+    </string-array>
+
+    <string-array name="printer_case">
+        <item>PJ_ROLLCASE_OFF</item>
+        <item>PJ_ROLLCASE_ON</item>
+        <item>PJ_ROLLCASE_WITH_ANTICURL</item>
+    </string-array>
+    <string-array name="printer_case_values">
+        <item>PJ_ROLLCASE_OFF</item>
+        <item>PJ_ROLLCASE_ON</item>
+        <item>PJ_ROLLCASE_WITH_ANTICURL</item>
+    </string-array>
+    <string-array name="pj_speed_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string name="is_carbon_title">Carbon</string>
+    <string name="is_carbon_value">Select the carbon</string>
+    <string name="pj_density_title">PJ Density</string>
+    <string name="pj_density_value">Select the PJ density</string>
+    <string name="mode9_title">Mode9</string>
+    <string name="mode9_value">Select the Mode9</string>
+    <string name="pj_speed_title">PJ Speed</string>
+    <string name="pj_speed_value">Select the PJ speed</string>
+
+    <string name="printer_case_title">Printer case</string>
+    <string name="printer_case_value">Select the printer case</string>
+    <string name="print_quality_title">打印质量</string>
+    <string name="print_quality_value">选择质量</string>
+
+
+    <string name="is_skip_status_check_title">跳过状态检查</string>
+    <string name="is_skip_status_check_value">选择跳过状态检查模式</string>
+    <string name="check_print_end_title">检查打印结束</string>
+    <string name="check_print_end_value">检查打印结束</string>
+    <string-array name="pj_density_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="feed_mode_title">Feed mode</string>
+    <string name="feed_mode_value">Select how to feed paper</string>
+
+    <string name="pj_paper_kind_title">Paper Kind</string>
+    <string name="pj_paper_kind_value">Select paper kind</string>
+
+    <string-array name="feed_mode">
+        <item>no feed（roll）</item>
+        <item>fixed page size feed（roll）</item>
+        <item>one page feed（cut paper）</item>
+        <item>one page feed（roll with mark）</item>
+    </string-array>
+    <string-array name="feed_mode_values">
+        <item>PJ_FEED_MODE_FREE</item>
+        <item>PJ_FEED_MODE_FIXEDPAGE</item>
+        <item>PJ_FEED_MODE_ENDOFPAGE</item>
+        <item>PJ_FEED_MODE_ENDOFPAGERETRACT</item>
+    </string-array>
+
+    <string-array name="pj_paper_kind_values">
+        <item>PJ_ROLL</item>
+        <item>PJ_CUT_PAPER</item>
+    </string-array>
+
+    <string name="align_title">Align</string>
+    <string name="align_value">Select the align</string>
+    <string name="paper_pos_title">Paper Position</string>
+    <string name="paper_pos_value">Select the Paper Position</string>
+
+    <string-array name="align">
+        <item>LEFT</item>
+        <item>CENTER</item>
+        <item>RIGHT</item>
+    </string-array>
+    <string-array name="alignValues">
+        <item>LEFT</item>
+        <item>CENTER</item>
+        <item>RIGHT</item>
+    </string-array>
+
+    <string name="valign_title">Valign</string>
+    <string name="valign_value">Select the valign</string>
+
+    <string-array name="valign">
+        <item>TOP</item>
+        <item>MIDDLE</item>
+        <item>BOTTOM</item>
+    </string-array>
+    <string-array name="valign_values">
+        <item>TOP</item>
+        <item>MIDDLE</item>
+        <item>BOTTOM</item>
+    </string-array>
+
+    <string name="left_margin_title">左边距</string>
+    <string name="left_margin_value">设置左边距 </string>
+    <string name="top_margin_title">顶部边距</string>
+    <string name="top_margin_value">设置顶部边距 </string>
+    <string name="custom_paper_width_title">自定义纸张宽度</string>
+    <string name="custom_paper_width_value">设置自定义纸张的宽度 </string>
+    <string name="custom_paper_length_title">自定义纸张长度</string>
+    <string name="custom_paper_length_value">设置自定义纸张的长度 </string>
+    <string name="custom_setting_title">自定义设置</string>
+    <string name="custom_setting_value">选择自定义设置文件</string>
+    <string name="custom_feed_title">进纸设置</string>
+    <string name="custom_feed_value">设置送纸长度</string>
+    <string name="rj_density_title">密度</string>
+    <string name="rj_density_value">选择密度</string>
+
+    <string-array name="rj_density_values">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string name="is_rotate180_title">Rotate 180</string>
+    <string name="is_rotate180_value">Rotate 180</string>
+
+    <string-array name="yes_no_entries">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+    <string-array name="yes_no_value">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+
+    <string name="dash_line_title">虚线打印</string>
+    <string name="dash_line_value">虚线打印</string>
+
+
+    <string name="is_end_cut_title">End Cut</string>
+    <string name="is_end_cut_value">do end cut or not</string>
+    <string name="is_auto_cut_title">自动剪切</string>
+    <string name="is_auto_cut_value">do auto cut or not</string>
+    <string name="is_peel_mode_title">PeelMode</string>
+    <string name="is_peel_mode_value">Wait for peeling label</string>
+    <string name="otherSettings_title">其他设置</string>
+    <string name="ip_mac_title">IP / MAC地址</string>
+    <string name="ip_mac_value">设置IP / MAC地址</string>
+    <string name="alignment_settings_title">对齐设置</string>
+    <string name="alignment_settings_value">设置对齐设置</string>
+    <string name="pj_settings_title">PJ设置</string>
+    <string name="pj_settings_value">设置PJ设置</string>
+    <string name="pj_td_settings_title">RJ / TD设置</string>
+    <string name="pj_td_settings_value">设置RJ / TD设置</string>
+    <string name="cut_settings_value">设置剪切设置</string>
+    <string name="cut_settings_title">剪切设置</string>
+
+    <string name="no_bluetooth_device">找不到蓝牙打印机</string>
+    <string name="button_refresh">刷新</string>
+    <string name="button_settings">设置</string>
+    <string name="button_get">获取</string>
+    <string name="button_update">设置</string>
+    <string name="text_ssp">SSP设置</string>
+    <string name="text_power_saving">省电</string>
+    <string name="text_net_bootmode">	网络设置开机（BT / USB）	</string>
+    <string name="text_net_interface">	选择接口（BT / USB）</string>
+    <string name="text_net_ip4_staticmode">	启用静态IP地址	</string>
+    <string name="text_net_ipv4_static_address">	IP地址	</string>
+    <string name="text_net_subnetmask">	子网掩码	</string>
+    <string name="text_net_gateway">	 网关	</string>
+    <string name="text_net_dns_ipv4_bootmethod">	启动方式	</string>
+    <string name="text_net_primary_dns_ipv4address">	主DNS服务器IP地址	</string>
+    <string name="text_net_second_dns_ipv4address">	 辅助DNS服务器IP地址 	</string>
+    <string name="text_net_nodenam">	 节点名称 	</string>
+    <string name="text_wirelessdirect_key_create_mode">	 SSID /网络密钥生成（BT / USB）	</string>
+    <string name="text_wirelessdirect_ssid">	SSID(BT/USB)	</string>
+    <string name="text_wirelessdirect_network_key">	网络密钥（只写）（BT / USB）</string>
+    <string name="text_printer_power_off_time">  自动关机 	</string>
+    <string name="text_printer_power_off_time_battery">	自动关机（锂离子）	</string>
+    <string name="text_print_jpeg_halftone">	JPEG打印半色调（BT / USB）	</string>
+    <string name="text_print_jpeg_scale">	JPEG打印刻度（BT / USB） 	</string>
+    <string name="text_print_speed">	打印速度（BT / USB） 	</string>
+    <string name="text_print_density">	打印浓度（BT / USB）   	</string>
+    <string name="text_bt_isdiscoverable">	其他设备可见（BT / USB）	</string>
+    <string name="text_bt_devicename">	蓝牙设备名称（BT / USB） 	</string>
+    <string name="text_bt_auto_connection">蓝牙自动连接（BT / USB）</string>
+
+    <string name="text_bt_bootmode">	Bluetooth on Power On(BT/USB)	</string>
+    <string name="text_wifi_setting">WiFi设置</string>
+    <string name="text_wirelessdirect_setting">无线连接设置</string>
+    <string name="text_printer_setting">打印机设置</string>
+    <string name="text_bluetooth_setting">蓝牙设置</string>
+    <string name="text_no_data">(没有数据)</string>
+
+    <string-array name="bootmode_array">
+        <item>On by default	</item>
+        <item>Off by default	</item>
+        <item>Keep Current State	</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="bootmode_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item></item>
+    </string-array>
+    <string-array name="net_interface_array">
+        <item>OFF</item>
+        <item>Wireless LAN</item>
+        <item>Wireless Direct</item>
+        <item>Wireless LAN and Wireless Direct</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="net_interface_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item></item>
+    </string-array>
+    <string-array name="ip_address_array">
+        <item>AUTO</item>
+        <item>BOOTP</item>
+        <item>DHCP</item>
+        <item>RARP</item>
+        <item>STATIC</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="ip_address_array_value">
+        <item>0</item>
+        <item>5</item>
+        <item>3</item>
+        <item>6</item>
+        <item>7</item>
+        <item></item>
+    </string-array>
+    <string-array name="enable_array">
+        <item>Disable</item>
+        <item>Enable</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="enable_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="dns_mode_array">
+        <item>AUTO</item>
+        <item>STATIC</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="dns_mode_array_value">
+        <item>2</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="key_create_mode_array">
+        <item>STATIC</item>
+        <item>AUTO</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="key_create_mode_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="bt_devicename_array">
+        <item>Not Discoverable</item>
+        <item>Discoverable</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="bt_devicename_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="jpeg_halftone_array">
+        <item>Binary	</item>
+        <item>	Error Diffusion	</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="jpeg_halftone_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="pj_density_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="pj_density_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="rj_density_array">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="rj_density_array_value">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="pj_speed_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="pj_speed_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="print_quality_array">
+        <item>LOW_RESOLUTION</item>
+        <item>NORMAL</item>
+        <item>DOUBLE_SPEED</item>
+        <item>HIGH_RESOLUTION</item>
+    </string-array>
+    <string-array name="print_quality_value">
+        <item>LOW_RESOLUTION</item>
+        <item>NORMAL</item>
+        <item>DOUBLE_SPEED</item>
+        <item>HIGH_RESOLUTION</item>
+    </string-array>
+
+
+    <string name="search_printer">搜索...</string>
+    <string name="end_title">结束</string>
+    <string name="end_message">返回首页</string>
+    <string name="close_message">关闭应用程序</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_ok">确定</string>
+    <string name="print_busy_label">打印机正忙</string>
+    <string name="battery_failed">失败</string>
+    <string name="battery_full">强</string>
+    <string name="battery_middle">中</string>
+    <string name="battery_weak">弱</string>
+    <string name="battery_charge">需要充电</string>
+    <string name="ac_adapter">AC适配器</string>
+    <string name="progress_dialog_message_communication_start">开始连接...</string>
+    <string name="close_connect">关闭中...</string>
+    <string name="bluetooth_printer_list_title_label">蓝牙打印机</string>
+    <string name="progress_dialog_message_transfer_start">传输开始...</string>
+    <string name="folder_name">文件夹名称</string>
+    <string name="error_input">错误输入</string>
+    <string name="msg_title_warning">警告</string>
+    <string name="button_next_print">下一个模板</string>
+    <string name="cancel_printer_msg">正在取消，请稍候</string>
+    <string name="template_encoding">编码：</string>
+
+
+    <string-array name="ssp_array">
+        <item>(NO CHANGE)</item>
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="power_mode_array">
+        <item>(NO CHANGE)</item>
+        <item>Connection time priority</item>
+        <item>Standard</item>
+        <item>Power-saving mode priority</item>
+    </string-array>
+
+
+    <string name="half_cut_title">裁剪一半(仅限PT)</string>
+    <string name="half_cut_value">是否裁剪一半</string>
+    <string name="special_tape_title">专用胶带纸（仅限PT）</string>
+    <string name="special_tape_value">是专用磁带纸</string>
+
+    <string name="ellipsis">\u2026</string>
+
+
+</resources>

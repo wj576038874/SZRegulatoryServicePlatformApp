@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tip"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_shipName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="55"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_mmsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_shipName"
+        android:gravity="center"
+        android:text="123456"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_hxzt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mmsi"
+        android:gravity="center"
+        android:text="用主机航行"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_hs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hxzt"
+        android:gravity="center"
+        android:text="航速"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_updatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hs"
+        android:gravity="center"
+        android:text="更新时间"
+        android:textSize="12sp" />
+
+</RelativeLayout>

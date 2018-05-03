@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/table_xqdk_titleBar"
+        layout="@layout/title" />
+    <LinearLayout
+        android:id="@+id/ll_psc_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--<com.ogaclejapan.smarttablayout.SmartTabLayout-->
+            <!--android:id="@+id/view_pager_tab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--app:stl_distributeEvenly="true"-->
+            <!--app:stl_indicatorColor="@color/blue"-->
+            <!--app:stl_indicatorThickness="3dp"-->
+            <!--app:stl_underlineThickness="1dp"-->
+            <!--/>-->
+        <com.winfo.szrsp.app.widget.MySmartTabLayout
+            android:id="@+id/view_pager_tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:stl_distributeEvenly="true"
+            app:stl_defaultTabTextColor="@drawable/tablelayout_text_select"
+            app:stl_indicatorColor="#3288fe"
+            app:stl_indicatorThickness="1.5dp"
+            app:stl_underlineThickness="0.5dp"
+            app:stl_defaultTabTextSize="14sp"
+            app:stl_indicatorCornerRadius="1dp"
+            app:stl_dividerThickness="0.5dp"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+    <include
+        android:id="@+id/view_faile"
+        layout="@layout/data_load_faild"/>
+
+
+</LinearLayout>

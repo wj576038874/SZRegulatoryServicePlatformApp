@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_shipInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:text="闻迅船舶基本信息"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/btn_see_shipinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/shape_button_bg_blue"
+            android:text="查看详情"
+            android:textColor="@android:color/white"
+            app:finalCornerAngle="50dp"
+            app:initialCornerAngle="3dp"
+            app:spinning_bar_color="@color/white"
+            app:spinning_bar_padding="5dp"
+            app:spinning_bar_width="3dp" />
+
+        <TextView
+            android:id="@+id/tv_shipinfo_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/btn_see_shipinfo"
+            android:gravity="center"
+            android:text="没有加载到数据"
+            android:visibility="gone" />
+
+        <!--<br.com.simplepass.loading_button_lib.customViews.CircularProgressImageButton-->
+        <!--android:id="@+id/btn_see_shipinfo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:background="@null"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:src="@drawable/shipinfo_zhankai"-->
+        <!--app:finalCornerAngle="50dp"-->
+        <!--app:initialCornerAngle="0dp"-->
+        <!--app:spinning_bar_color="@color/blue"-->
+        <!--app:spinning_bar_padding="2dp"-->
+        <!--app:spinning_bar_width="3dp" />-->
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffb2b2b2" />
+
+
+    <TableLayout
+        android:id="@+id/tablelayout_shipinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@color/tableline">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="中文船名"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_name_cn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:text="asd"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="英文船名"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_name_en"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="MMSI"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_mmsi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="IMO"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_imo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶识别号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船籍港"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_regport_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶种类"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_type_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶长度（米）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_length"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="总吨（吨）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_grosston"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="净吨（吨）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_netton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="海船/河船"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_region_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="国籍"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_nation_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="航区"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_sailingarea_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="建成日期"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_built_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="核定抗风等级"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_wind_level"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶所有人"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_owner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶经营人"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_operator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="救生设备最大人数"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_rescue_equipment_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="牌簿号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_card_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="参考载重吨（吨）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_dwt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶价值"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶呼号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_callsign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶型宽（米）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_breadth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶型深（米）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_depth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶登记号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_reg_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="初次登记号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_firstreg_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="机构代码"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_org_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="主机种类"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_engine_type_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="主机数量(个)"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_engine_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="主机功率（kw）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_engine_power"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="航线"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_route_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="改建日期"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_rebuilt_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="造船厂"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_shipyard_cn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="造船地点"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_built_addr_cn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="改建地点"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_rebuilt_addr_cn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船体材料"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_hull_material_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="推进器种类"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_propeller_kind_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="推进器数量（个）"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_propeller_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="夏季满载吃水"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_summer_draft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船检登记号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_inspect_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="原中文船名"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_orig_ship_name_cn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="原英文船名"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_orig_ship_name_en"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="原船舶登记号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_orig_ship_reg_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="原船籍港名称"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_orig_regport_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="箱位"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_container_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="车位"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_parking_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="客位"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_passenger_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="英文造船厂"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_shipyard_en"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="英文造船地点"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_built_addr_en"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="英文改建地点"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_rebuilt_addr_en"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶编号"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶分类"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_class"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶管理人"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_manager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="航速"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_speed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="最小干舷"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ship_minimum_freeboard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="备注"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="证书核对标志"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_certificate_flag"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

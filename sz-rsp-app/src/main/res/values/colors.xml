@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3286fe</color>
+    <color name="colorPrimaryDark">#1978fc</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <drawable name="divider">#999</drawable>
+    <drawable name="table_background">#444</drawable>
+
+    <color name="spinnerpop_notedit_bg_color">#C5C5C5</color>
+    <color name="spinnerpop_selected_text_color">#0365C5</color>
+    <color name="spinnerpop_normal_text_color">#191919</color>
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- 黑色 3-->
+    <color name="black">#333333</color>
+
+    <!-- 天蓝色 -->
+    <color name="sky_blue">#00F5FF</color>
+
+    <!-- 黑色 6-->
+    <color name="black6">#666666</color>
+
+    <!-- 黑色 9-->
+    <color name="black9">#999999</color>
+
+    <!-- 基底颜色 -->
+    <color name="appbg">#f1f7ff</color>
+
+    <!-- 登入灰色 -->
+    <color name="login_gray">#55000000</color>
+
+    <!-- 登录按钮色 -->
+    <color name="green">#4fbfb0</color>
+
+    <color name="line">#FFFFFF</color>
+
+    <color name="bg">#f1f7ff</color>
+
+    <!-- 按钮不可点击的颜色 -->
+    <color name="btn_enable">#848484</color>
+
+    <!-- 按钮可点击的颜色 -->
+    <color name="btn_nable">#3B3B3B</color>
+
+    <!-- 红色 -->
+    <color name="red">#FF3030</color>
+
+    <!-- 文本颜色 -->
+    <color name="textColor">#757575</color>
+
+    <!-- 选中的颜色 -->
+    <color name="selected">#FF3030</color>
+
+    <!-- 未选中的颜色 -->
+    <color name="no_selected">#000000</color>
+
+    <!-- 蓝色 -->
+    <color name="blue">#3286fe</color>
+
+    <!-- 浅灰色 -->
+    <color name="bg_Gray_light">#EEEEEE</color>
+
+    <!-- 线条颜色 -->
+    <color name="view_line_color">#ececec</color>
+    <!-- 线条颜色2 -->
+    <color name="view_line_color2">#20000000</color>
+    <!-- 船舶相關頭部顏色 -->
+    <color name="title_color">#22000000</color>
+
+    <!-- winfomapview -->
+    <color name="winfoDNCView_color">#9CB6CE</color>
+
+    <!-- 船舶管理 字段值的颜色 -->
+    <color name="ship_manager_textcolor">#808080</color>
+
+    <!-- 设置中的小字体 -->
+    <color name="setting_small_text_color">#77000000</color>
+
+    <!-- login_text_color -->
+    <color name="login_text_color">#3f3f3f</color>
+
+    <!--消息背景 -->
+    <color name="msg_pop_bg">#ecf3f8</color>
+
+    <!-- nearby_bg -->
+    <color name="nearby_bg">#E0E0E0</color>
+
+    <!-- nearby_text_color -->
+    <color name="neaby_text_color">#666666</color>
+
+    <!-- 附近gridView背景颜色 -->
+    <color name="neaby_gridView_color">#eff0f4</color>
+
+    <color name="neaby_gridView_down_color">#85D3EF</color>
+
+    <!-- 附近的背景 -->
+    <color name="nearby_list_bg">#3b7fd4</color>
+
+    <!-- 分页的背景 -->
+    <color name="page_bg">#E5E5E5</color>
+
+    <!-- 分页——的按钮的颜色 -->
+    <color name="page_button_color">#3B3B3B</color>
+
+    <color name="toast_bg">#EDEDED</color>
+
+    <color name="pressed_color">#ececec</color>
+
+    <!-- 选择界面点击登入字体颜色 -->
+
+    <color name="login_text_press">#BDBDBD</color>
+
+    <color name="near_text_press_down">#333333</color>
+    <color name="near_text_press">#999</color>
+
+
+    <drawable name="transparent">#00000000</drawable>
+
+    <color name="common_white">#ffffff</color>
+    <color name="common_white_shadow">#414141</color>
+    <color name="common_white_disabled">#e7e7e7</color>
+    <!-- For main texts -->
+    <color name="common_dark">#3d5562</color>
+    <color name="common_dark_shadow">#dedede</color>
+    <color name="common_dark_disabled">#9aa7af</color>
+    <!-- For secondary texts -->
+    <color name="common_grey">#8496a0</color>
+    <color name="common_grey_disabled">#aabbc4</color>
+    <!-- For danger cases, such as virus, file delete... -->
+    <color name="common_red">#e62f2f</color>
+    <!-- For warning cases, such as trashes... -->
+    <color name="common_yellow">#f1930d</color>
+    <!-- For safe cases -->
+    <color name="common_green">#60990c</color>
+    <!-- For suggestions -->
+    <color name="common_blue">#4b8bbd</color>
+    <color name="tab_indicator_text_selected">#3b7fd4</color>
+    <color name="tab_indicator_text_unselected">#333333</color>
+    <color name="page_viewer_margin_color">#007800</color>
+
+
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#edf2f7</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+
+    <color name="pickerview_wheelview_minutetextcolor_center">#2EA9FF</color>
+
+
+
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+
+    <color name="horvoice_text_color">#ff9c00</color>
+
+    <color name="titleBarColor">#3286fe</color>
+    <color name="titleBtnBackbg">#26000000</color>
+    <color name="translucent">#00000000</color>
+    <color name="tableline">#B5D4FF</color>
+    <color name="tablebackground">#F4F8FF</color>
+
+    <color name="main_top_color">#f7614d</color>
+    <color name="main_top_tab_color">#fcc9c5</color>
+    <color name="main_top_tab_color_2">#ffffff</color>
+    <color name="matrix_color">#ffffff</color>
+</resources>

@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/table_xqdk_titleBar"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/ll_sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="船舶载运普通货物集装箱开箱检查记录表"
+                android:textColor="#ff333333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查时间： "
+                    android:textColor="#ff333333"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/et_ship_inspectTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/table_edt_bg"
+                    android:gravity="center"
+                    android:minHeight="30dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#333"
+                    android:textColorHint="#999"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="深海"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/et_ship_deeSea"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/table_edt_bg"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:textColor="#333"
+                            android:textColorHint="#999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="集开检字第"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[" />
+
+                        <TextView
+                            android:id="@+id/et_ship_time"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textColor="#333"
+                            android:textColorHint="#999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="]" />
+
+                        <TextView
+                            android:id="@+id/et_ship_num"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/table_edt_bg"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:textColor="#333"
+                            android:textColorHint="#999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="号"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#999">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="承运船舶"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_carrier_ship"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="承运人/代理人"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_carrier_people"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="航    次"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_voyage_number"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="托运人/代理人"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_consignment_people"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="提单号"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_order_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="箱    号"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_box_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="开箱检查通知书编号"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/ed_open_box_book_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="检查前铅封号"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_inspect_before_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="检查后铅封号"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_inspect_after_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="货物名称"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_goods_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="6.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="5"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="6dp"
+                        android:text="检查项目"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2.5"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="检查情况"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="5"
+                        android:background="@color/white"
+                        android:paddingLeft="3dp"
+                        android:text="1. 装载货物是否与申报货物名称一致；"
+                        android:textColor="#333"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2.5"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/ck_1_yes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="正常"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/ck_1_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="异常"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="5"
+                        android:background="@color/white"
+                        android:paddingLeft="3dp"
+                        android:text="2. 装载货物是否为普通货物；"
+                        android:textColor="#333"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2.5"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/ck_2_yes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="正常"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/ck_2_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="异常"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:background="@color/white"
+                    android:minHeight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="5dp"
+                            android:text="具体异常情况记录："
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/et_exceptions_record"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textColor="#333"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:background="@color/white"
+                    android:minHeight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="5dp"
+                            android:text="拟处理意见:"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+
+                        <CheckBox
+                            android:id="@+id/ck_correct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="当场纠正;"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/ck_defects_exist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="存在重大缺陷，重新装箱处理；"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/ck_false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="涉嫌谎报，立案调查；"
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/ck_other"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="其他："
+                                android:textColor="#ff333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/ed_other"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0.5dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="4"
+                                android:background="@drawable/table_edt_bg"
+                                android:gravity="center"
+                                android:textColor="#333"
+                                android:textSize="15sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:background="@color/white"
+                    android:minHeight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="5dp"
+                            android:text="处理结果："
+                            android:textColor="#ff333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/et_process_results"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textColor="#333"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="执法人员"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_zhifa_people1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="执法证号码"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/et_zhifa_cardNum1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:paddingBottom="9dp"
+                        android:paddingTop="9dp"
+                        android:text="承运人、托运人或其代理签名"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/et_autograph"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginBottom="0.5dp"-->
+                    <!--android:layout_marginLeft="0.5dp"-->
+                    <!--android:layout_marginRight="0.5dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textColor="#333"-->
+                    <!--android:textSize="15sp" />-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_qm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp" />
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_print_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_button_bg_blue"
+                    android:text="打印"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

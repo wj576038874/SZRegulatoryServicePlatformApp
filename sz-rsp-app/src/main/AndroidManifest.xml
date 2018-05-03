@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.winfo.szrsp.app">
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 录制视频/音频权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 发短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--Android8.0未知来源应用安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:name=".application.SzRspApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="37adee12d6a32ac10ffce7d2ce05d3b9" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name=".service.UpdateVersionService" />
+
+        <activity
+            android:name=".mvp.mine.login.view.impl.UserLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.mine.usercenter.view.UserCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.task.view.TaskListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.task.view.TaskdetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".print.PrintPdfActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.message.view.MessageCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity
+            android:name=".print.Activity_StartMenu"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/jpg" />
+                <data android:mimeType="image/bmp" />
+                <data android:mimeType="image/png" />
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".print.Activity_PrintImage"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_print_image">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".print.Activity_PrintPdf"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_print_pdf" />
+
+
+        <activity
+            android:name=".print.Activity_TransferPdz"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_transfer_pdz" />
+
+        <activity
+            android:name=".print.Activity_PrintTemplate"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_print_template" />
+
+        <activity
+            android:name=".print.Activity_FileList"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/file_explorer_title">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".print.Activity_Settings"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/menu_settings" />
+        <activity
+            android:name=".print.Activity_NetPrinterList"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize" />
+        <activity
+            android:name=".print.Activity_BluetoothPrinterList"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize" />
+        <activity
+            android:name=".print.Activity_MWBluetoothPrinterPreference"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_device_setting" />
+        <activity
+            android:name=".print.Activity_RemoveTemplate"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_remove_template" />
+        <activity
+            android:name=".print.Activity_ManageTemplate"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_transfer_manager" />
+
+        <activity
+            android:name=".print.Activity_NetSettings"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_wifi_setting" />
+
+
+        <activity
+            android:name=".print.Activity_BluetoothSettings"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_bluetooth_setting" />
+
+        <activity
+            android:name=".print.Activity_PrinterSettings"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_printer_setting" />
+
+
+        <activity
+            android:name=".print.Activity_PrinterPreference"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+            android:label="@string/text_device_setting" />
+
+        <activity
+            android:name="com.winfo.szrsp.app.widget.LandscapeActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".mvp.table.cqgjdbg.view.SupervisionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cqgjdbg.view.FuChaAnJianActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbxcjdbg.view.JdbgActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbxcjdbg.view.FuChaJianDuActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cqgjdjcqktzs.view.CqgjdjcqktzsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.dxshcjcb.view.DXSHCJCBActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.dxshcjcb.view.DetailDXSHCActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.ssxh.view.WatersPatrolActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.findalltable.view.AllTableActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.cbxcjdbg.view.DetailJdbgActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cqgjdbg.view.DetailSupervisionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.fragmentlist.ChecklistMainActvity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".mvp.mine.userinfo.UserInfoActivity" />
+
+        <activity android:name=".mvp.table.ssxh.view.DetailWatersPatrolActivity" />
+
+        <activity
+            android:name=".mvp.task.view.TaskInspectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".mvp.table.finishtask.view.FinishTaskActivity" />
+        <activity
+            android:name=".mvp.table.pscb.view.PSCFormBActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".mvp.table.psca.view.DetailPSCFormActivity" />
+
+        <service android:name=".service.TimerService" />
+
+        <activity
+            android:name=".mvp.table.psca.view.PSCFormAActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".mvp.task.view.ShipMapActivity" />
+        <activity
+            android:name=".mvp.table.TableListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.exceptionship.view.ExceptionShipListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbwfxcjdbg.view.CBWFXCJDActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.xhgzjl.view.CruiseWorkRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.xhgzjl.view.DetailCruisrWorkRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzywxhwxcjc.view.DangerousGoodsXianChangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzywxhwxcjc.view.DetailDangerousGoodsXianChangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzy.view.DangerousGoodsKaiXiangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzy.view.DetailDangerousGoodsKaiXiangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzypthwkxjc.view.OrdinaryGoodsKaiXiangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzyjzxzljc.view.ContainerWeightInspectActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbwfxcjdbg.view.DetailCBWFXCActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.xhtj.view.CruiseStatisticsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.table.xhtj.view.DetailCruiseStatisticsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".mvp.table.dzxhydgz.view.ElectronicCruiseWorkActivity" />
+        <activity android:name=".mvp.table.dzxhyc.view.ElectronicCruiseAbnormalActivity" />
+        <activity android:name=".mvp.table.dzxhyc.view.DetailElectronicCruiseAbnormalActivity" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+        <activity
+            android:name=".mvp.task.view.taskfragmentlist.view.TaskMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".mvp.task.view.taskfragmentlist.view.AssignTaskActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzypthwkxjc.view.DetailOrdinaryGoodsKaiXiangActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.cbzyjzxzljc.view.DetailContainerWeightInspectActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.table.kxjc.view.KxjcActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.certificate.view.CertificateActvity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.certificate.view.PicturePreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.certificate.view.CertificateMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.certificate.view.ImagePagerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.setting.view.SettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.setting.view.VersionInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.mine.feedback.view.FeedBackMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:smallScreens="true"
+            android:windowSoftInputMode="adjustPan" />
+
+    </application>
+
+</manifest>

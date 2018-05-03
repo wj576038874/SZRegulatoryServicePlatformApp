@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="big_text_size">21sp</dimen><!-- 标题字体大小 -->
+    <dimen name="navigationbar_text_size">18sp</dimen><!-- 导航栏字体大小 -->
+    <dimen name="title_text_size">17sp</dimen><!-- 标题字体大小 -->
+    <dimen name="normal_text_size">16sp</dimen><!-- 通常字体大小 -->
+    <dimen name="medium_text_size">14sp</dimen><!-- 中等字体大小 -->
+    <dimen name="small_text_size">12sp</dimen><!-- 小号字体大小 -->
+    <dimen name="fifteen_text_size">15sp</dimen><!-- 通常字体大小 -->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">10dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">16sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">16sp</dimen>
+    <!-- 选项文字大小 需要配合 bools.xml 的 pickerview_customTextSize 为 true 才有效果-->
+    <dimen name="pickerview_textsize">16sp</dimen>
+    <dimen name="common_text_size_middle">16dp</dimen>
+    <dimen name="common_text_size_middle_2">14dp</dimen>
+
+
+
+</resources>

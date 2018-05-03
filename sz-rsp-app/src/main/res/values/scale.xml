@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="level18">50米</string>
+    <string name="level17">100米</string>
+    <string name="level16">200米</string>
+    <string name="level15">250米</string>
+    <string name="level14">500米</string>
+    <string name="level13">1公里</string>
+    <string name="level12">2公里</string>
+    <string name="level11">5公里</string>
+    <string name="level10">10公里</string>
+    <string name="level9">20公里</string>
+    <string name="level8">50公里</string>
+    <string name="level7">100公里</string>
+    <string name="level6">200公里</string>
+    <string name="level5">250公里</string>
+    <string name="level4">500公里</string>
+    <string name="level3">1000公里</string>
+    <string name="level2">2000公里</string>
+    <string name="level1">5000公里</string>
+</resources>

@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/table_xqdk_titleBar"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/ll_sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="end"
+                android:text="FORM B"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="REPORT OF INSPECTION IN ACCORDANCE WITH THE MEMORANDUM"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="OF UNDERSTANDING ON PORT STATE CONTROL IN THE ASIA-PACIFIC REGION*)"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:layout_gravity="end"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="Copy to: Master /Head office /PSCO"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:text="Authority: MARITIME SAFTY ADMINISTRATION OF THE PEOPLE’S REPUBLIC OF CHINA"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:text="Add: 11, Jianguomennei Ave. Beijing, 100736"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:text="Tel: +86-10-6529-2872 Fax: +86-10-6529-2245"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:text="Cable: MINOCOM Telex: 222258 CMSAR CN"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:text="E-mail: China_psc@msa.gov.cn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="end"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:text="If ship is detained, copy to: Flag State /IMO/ Recognized organization, if applicable"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:minHeight="30dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="#333333"
+                    android:text="2 name of ship"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/et_name_of_ship"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/table_edt_bg"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="5dp"
+                    android:text="6 IMO number"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/et_imo_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/table_edt_bg"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:minHeight="30dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="#333333"
+                    android:text="10 date of inspection"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/et_date_of_inspection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/table_edt_bg"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="5dp"
+                    android:text="11 place of inspection"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/et_place_of_inspection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/table_edt_bg"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tl_psc_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/near_text_press">
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="20 number"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="21 code"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="nature of deficiency(4)"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="convention reference(5)"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="22 action taken(6)"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:text="23 responsible RO(5)"/>
+
+                </TableRow>
+
+                <!--<TableRow>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/number_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginLeft="0.5dp"-->
+                        <!--android:layout_marginRight="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:inputType="number"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_code_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_nature_of_deficiency_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_convention_reference_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_action_taken_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_responsible_RO_1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                <!--</TableRow>-->
+                <!--<TableRow>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/number_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginLeft="0.5dp"-->
+                        <!--android:layout_marginRight="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:inputType="number"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_code_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_nature_of_deficiency_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_convention_reference_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_action_taken_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_responsible_RO_2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                <!--</TableRow>-->
+                <!--<TableRow>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/number_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginLeft="0.5dp"-->
+                        <!--android:layout_marginRight="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:inputType="number"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_code_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_nature_of_deficiency_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_convention_reference_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_action_taken_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_responsible_RO_3"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                <!--</TableRow>-->
+                <!--<TableRow>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/number_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginLeft="0.5dp"-->
+                        <!--android:layout_marginRight="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:inputType="number"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_code_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_nature_of_deficiency_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_convention_reference_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_action_taken_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_responsible_RO_4"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="0.5dp"-->
+                        <!--android:layout_marginEnd="0.5dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:textSize="13sp"/>-->
+                <!--</TableRow>-->
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <ImageView
+                    android:id="@+id/iv_add_table_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_add"
+                    android:layout_margin="10dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_delete_table_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_delet"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="#333333"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/table_edt_bg"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:text="Signature"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/table_cqgjdjcqktzs_bg">
+                        <ImageView
+                            android:id="@+id/qm_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:text="(duly authorized PSCO of reporting authority)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:text="(4) This inspection was not a full survey and deficiencies listed may not be exhaustive. In the event of a detention, it is recommended that full survey is carried out of and all deficiencies are rectified before an application for re-inspection is made."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:text="(5) To be completed in the event of a detention."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:text="(6) Applicable Deficiency Action Codes (see reverse side of copy) to be entered."/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Deficiency Action Codes"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="PSC Inspection Action Code (tick as applicable)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="10 Deficiency rectified"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="26 Competent security authority informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="15 Rectify deficiency at next port"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="27 Ship expelled on security grounds"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="16 Rectify deficiency within 14 days"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="40 Next port informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="17 Rectify deficiency before departure"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="50 Flag state/consul informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="18 Rectify deficiency within 3 months"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="55 Flag state consulted"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="30 Detainable deficiency"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="70 Recognized organization informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="46 Rectify detainable deficiency at agreed repair port"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="85 Investigation of contravention of discharge provisions (MARPOL)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="48 As in the agreed flag state condition"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="151 ILO informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="49 As in the agreed rectification action plan"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="152 Seafares’ organization informed"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="99 other (specify in clear text)"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="155 Ship owner representative informed"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_button_bg_blue"
+                android:gravity="center"
+                android:text="提交表格"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

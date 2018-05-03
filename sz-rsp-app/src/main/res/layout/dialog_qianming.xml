@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+
+
+    <ImageView
+        android:layout_height="200dp"
+        android:id="@+id/dialog_record_pen_iv"
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:scaleType="centerInside"
+         />
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+        <Button
+            android:background="@drawable/message_bg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+
+            android:text="确认"
+            android:id="@+id/dialog_record_ok"
+            android:textColor="#0091ff"
+            />
+        <Button
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/message_bg"
+            android:textColor="#0091ff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:id="@+id/dialog_record_reautograph"
+            android:text="重新签名"
+            />
+
+    </LinearLayout>
+</LinearLayout>

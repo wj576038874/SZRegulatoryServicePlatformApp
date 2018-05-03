@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/tableline">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="检查日期"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_security_check_jcrq"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:text="2017-12-22"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/tablebackground"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="缺陷数量"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_security_check_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_security_check_open"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:src="@mipmap/crew_open" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/tablelayout_security_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="70.5dp"
+        android:background="@color/tableline"
+        android:visibility="gone">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="缺陷主键"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_qxzj"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="检查主键"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_jczj"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="序号"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_xh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="项目编号"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_xmbh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="缺陷描述"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_qxms"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="缺陷"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_qxyg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="初次处置代码"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_ccczdm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="操作标记"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_databasetablerowoperation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+        </TableRow>
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:layout_marginLeft="0.5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center"-->
+                <!--android:minHeight="30dp"-->
+                <!--android:text="船舶主键"-->
+                <!--android:textColor="#666"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_security_cbzj"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:layout_marginLeft="0.5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="start|center_vertical"-->
+                <!--android:minHeight="30dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:textColor="#666"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:layout_marginLeft="0.5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center"-->
+                <!--android:minHeight="30dp"-->
+                <!--android:text="缺陷数量"-->
+                <!--android:textColor="#666"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_security_count"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:layout_marginLeft="0.5dp"-->
+                <!--android:layout_marginRight="0.5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="start|center_vertical"-->
+                <!--android:minHeight="30dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:textColor="#666"-->
+                <!--android:textColorHint="#999"-->
+                <!--android:textSize="15sp" />-->
+        <!--</TableRow>-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="船舶主键"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_cbzj"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:text="最后修改时间"
+                android:textColor="#666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_security_zhxgsj"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start|center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:textColor="#666"
+                android:textColorHint="#999"
+                android:textSize="15sp" />
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

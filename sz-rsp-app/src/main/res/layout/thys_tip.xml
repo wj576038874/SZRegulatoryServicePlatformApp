@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tip"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_thysName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="55"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_thysType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_thysName"
+        android:gravity="center"
+        android:text="123456"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_thysjg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_thysType"
+        android:gravity="center"
+        android:text="用主机航行"
+        android:textSize="@dimen/small_text_size" />
+</RelativeLayout>

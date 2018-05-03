@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tip"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/tv_cityweatherTianqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多云"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cityweatherQiwen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cityweatherTianqi"
+        android:gravity="center"
+        android:text="11~12"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/tv_cityweather_Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cityweatherQiwen"
+        android:gravity="center"
+        android:text="城市"
+        android:textSize="12sp" />
+
+</RelativeLayout>

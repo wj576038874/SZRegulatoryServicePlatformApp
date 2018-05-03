@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.winfo.szrsp.app"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 20180323
+        versionName "2.3.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true//解决处理 android 方法总数超过 65536 . the number of method references in a .dex file exceed 64k
+        manifestPlaceholders = [
+                JPUSH_APPKEY : "a022b40288da162346533b12", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        //设置支持的语言
+        resConfigs "en", "zh", "zh-rCN"
+        ndk {
+            //设置支持的SO库架构， 目前只有armeabi的so库
+            abiFilters 'armeabi'  //, 'armeabi-v7a', 'x86',  'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/galaxy-v2.0.jar')
+    compile files('libs/BrotherPrintLibrary.jar')
+    compile files('libs/core-3.2.1.jar')
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    compile 'io.reactivex:rxjava:1.2.6'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.kyleduo.switchbutton:library:1.4.6'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:26.1.0'
+    compile 'pub.devrel:easypermissions:0.4.0'
+    compile 'com.amap.api:location:3.6.1'
+    implementation project(':model-sdk')
+    //下拉刷新
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'br.com.simplepass:loading-button-android:1.12.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.33'
+    compile 'net.vidageek:mirror:1.6.1'
+    compile 'com.rabtman.wsmanager:wsmanager:1.0.2'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.github.bumptech.glide:glide:4.3.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.0'
+    implementation project(':imageloaderlibrary')
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.12@aar'
+    compile 'cn.jiguang.sdk:janalytics:1.2.0'
+    compile 'cn.jiguang.sdk:jcore:1.1.9'
+    compile 'me.panpf:sketch:2.6.1'
+//    compile 'com.github.SuperKotlin:PictureViewer:2.0.1'  //新版本
+    compile 'com.bm.photoview:library:1.4.1'
+}

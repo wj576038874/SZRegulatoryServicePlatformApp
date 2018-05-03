@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="New Text"
+    android:padding="7dp"
+    android:singleLine="true"
+    android:textSize="14sp"
+    android:textColor="@color/xczf_sprinner_item_bg"
+    android:background="@drawable/cbaj_spinner_text_bg"
+    android:gravity="left|center_vertical"
+    android:id="@+id/textView3333" />
+

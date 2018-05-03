@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/table_xqdk_titleBar"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/ll_sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="水上巡航表格"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017年11月16日"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <CheckBox
+                    android:id="@+id/rb_am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="上午  /"/>
+
+                <CheckBox
+                    android:id="@+id/rb_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="下午  /" />
+
+                <CheckBox
+                    android:checked="true"
+                    android:id="@+id/rb_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="其他"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="巡航人员签名："
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_xhry_qm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="点击签名"
+                                android:textColor="#333333"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:textSize="12sp" />
+
+
+                            <ImageView
+                                android:id="@+id/iv_qm"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:visibility="gone"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/view_line_color" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_name_signature"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="巡航人员姓名："
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                        <EditText
+                            android:background="@drawable/table_cqgjdjcqktzs_bg"
+                            android:textColor="#333333"
+                            android:padding="5dp"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:hint="请填写巡航人"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一、巡航手段："
+                    android:textColor="#ff202020"
+                    android:textSize="13sp"/>
+                <CheckBox
+                    android:checked="true"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="现场巡航检查"
+                    android:textColor="#333333"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二、水域巡航记录表"
+                    android:textColor="#202020"
+                    android:textSize="13sp"/>
+                <!-- <CheckBox
+                     android:id="@+id/cb_setalltime"
+                     android:text="批量修改时间"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentRight="true"/>-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="巡航起止时间"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="巡航区域"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="状态是否正常"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="40dp"
+                    android:text="巡航发现异常"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/syxh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp">
+                <ImageView
+                    android:id="@+id/syxh_add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/syxh_del_img"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/btn_add" />
+                <ImageView
+                    android:id="@+id/syxh_del_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/btn_delet" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三、码头、岸线巡查记录表"
+                    android:textColor="#202020"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="巡航起止时间"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="巡航区域"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="状态是否正常"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="40dp"
+                    android:text="巡航发现异常"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mtax_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp">
+                <ImageView
+                    android:id="@+id/mtax_add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/mtax_del_img"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/btn_add" />
+                <ImageView
+                    android:id="@+id/mtax_del_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/btn_delet" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="四、水工作业船舶检查记录表"
+                    android:textColor="#202020"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="作业名称"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="审批船舶名称"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="检查起止时间"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="船舶位置"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="检查情况"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sgzy_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp">
+                <ImageView
+                    android:id="@+id/sgzy_add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/sgzy_del_img"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/btn_add" />
+                <ImageView
+                    android:id="@+id/sgzy_del_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/btn_delet" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="五、其他船舶检查记录表"
+                    android:textColor="#202020"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="检查起止时间"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="船舶位置"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="船名"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="船舶类型"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="检查情况"
+                    android:textColor="#202020"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/table_waters_patrol_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/qtcb_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp">
+                <ImageView
+                    android:id="@+id/qtcb_add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/qtcb_del_img"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/btn_add" />
+                <ImageView
+                    android:id="@+id/qtcb_del_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/btn_delet" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/track_btn_ok"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_button_bg_blue"
+                android:text="提交报告"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text_size" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

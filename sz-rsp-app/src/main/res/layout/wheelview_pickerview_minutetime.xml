@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="50dp"
+    android:layout_marginLeft="50dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:background="@drawable/dialog_top_bg"
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:text="巡航起止时间"
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="开始时间"
+            android:textColor="#808080"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="结束时间"
+            android:textColor="#808080"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/timepicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="5dp">
+
+        <View
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="#2EA9FF"
+            ></View>
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.MinuteWheelView
+            android:id="@+id/strat_hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.MinuteWheelView
+            android:id="@+id/start_min"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <View
+            android:layout_marginRight="1dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#B2B2B2"
+            ></View>
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.MinuteWheelView
+            android:id="@+id/stop_hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.MinuteWheelView
+            android:id="@+id/stop_min"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+        <View
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="#2EA9FF"
+            ></View>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+
+    <LinearLayout
+        android:background="@drawable/dialog_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#B2B2B2"
+            ></View>
+        <Button
+            android:background="@color/translucent"
+            android:id="@id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_submit"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

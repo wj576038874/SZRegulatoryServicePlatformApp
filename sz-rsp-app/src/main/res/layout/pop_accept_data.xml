@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/accept_data_ll_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/btn_normal_bg"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:text="执法人"
+            android:layout_width="100dp"
+            android:layout_height="25dp" />
+
+        <com.winfo.szrsp.app.widget.FlowLayout
+            android:background="@color/view_line_color2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pop_accept_fl_person"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+        </com.winfo.szrsp.app.widget.FlowLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/accept_data_ll_resouse_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/btn_normal_bg"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:text="执法资源(执法车)"
+            android:layout_width="150dp"
+            android:layout_height="30dp" />
+
+        <com.winfo.szrsp.app.widget.FlowLayout
+            android:background="@color/view_line_color2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pop_accept_fl_resouse_car"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+        </com.winfo.szrsp.app.widget.FlowLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/accept_data_ll_resouse_ship"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/btn_normal_bg"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:text="执法资源(执法船)"
+            android:layout_width="150dp"
+            android:layout_height="30dp" />
+
+        <com.winfo.szrsp.app.widget.FlowLayout
+            android:background="@color/view_line_color2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pop_accept_fl_resouse_ship"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+        </com.winfo.szrsp.app.widget.FlowLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+    <LinearLayout
+        android:background="@drawable/dialog_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="取消认领"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#B2B2B2"
+            ></View>
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="确认认领"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

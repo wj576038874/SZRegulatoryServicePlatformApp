@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@color/blue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="标绘详情"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/plotting_detail_dissmiss"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:textSize="25sp"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:text="×"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/ship_manager_zdll">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="标绘名称" />
+
+                <TextView
+                    android:id="@+id/plotting_name"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line" />
+
+            <LinearLayout style="@style/ship_manager_zdll">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="类型" />
+
+                <TextView
+                    android:id="@+id/plotting_drawtype"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line" />
+
+            <LinearLayout style="@style/ship_manager_zdll">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="坐标" />
+
+                <TextView
+                    android:id="@+id/plotting_latlon"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line"
+                android:id="@+id/line_color"/>
+
+            <LinearLayout style="@style/ship_manager_zdll"
+                android:id="@+id/ll_color"
+                >
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="颜色" />
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/plotting_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="5dp"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line"
+                android:id="@+id/line_style"/>
+
+            <LinearLayout style="@style/ship_manager_zdll"
+                android:id="@+id/ll_style">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="样式" />
+
+                <TextView
+                    android:id="@+id/plotting_style"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line" />
+
+            <LinearLayout style="@style/ship_manager_zdll">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="创建人" />
+
+                <TextView
+                    android:id="@+id/plotting_creater"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line" />
+            <LinearLayout style="@style/ship_manager_zdll">
+
+                <TextView
+                    style="@style/ship_manager_zdmtv"
+                    android:text="备注" />
+
+                <TextView
+                    android:id="@+id/plotting_mark"
+                    style="@style/ship_manager_zdztv" />
+            </LinearLayout>
+
+            <View style="@style/ship_manager_line" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<style>
+			.inputShipName {
+				/*border: none #777777;
+				border-bottom: #777777 solid 1px;
+				border-top: #777777 solid 1px;
+				border-right: #777777 solid 1px;
+				border-left: #777777 solid 1px;*/
+				border: #777777 1px solid;
+				background: transparent;
+				width: 140px;
+				outline: none;
+				font-size: 18px;
+				height: 25px;
+				border-radius: 2px;
+				text-align: center;
+			}
+
+			.inputTimeclass {
+				border: #777777 1px solid;
+				background: transparent;
+				width: 180px;
+				height: 25px;
+				outline: none;
+				text-align: center;
+				font-size: 18px;
+				border-radius: 2px;
+			}
+
+			.input {
+				border: #777777 1px solid;
+				background: transparent;
+				height: 25px;
+				width: 60px;
+				outline: none;
+				text-align: center;
+				font-size: 18px;
+				border-radius: 2px;
+			}
+
+			.inputAddress {
+				border: #777777 1px solid;
+				background: transparent;
+				width: 150px;
+				border-radius: 2px;
+				height: 25px;
+				outline: none;
+				font-size: 18px;
+				border-radius: 2px;
+			}
+
+			p {
+				text-indent: 2em;
+				font-size: 18px;
+			}
+		</style>
+
+	<script src="./js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript">
+			function setShipName(str) {
+				document.getElementById("inputShipName").value = str;
+			}
+
+			function initTime(time) {
+				document.getElementById("inputTime").value = time;
+			}
+
+			function setTime(time) {
+				document.getElementById("inputTime").value = time;
+			}
+
+			$(function() {
+				$("#inputTime").click(function() {
+					window.handler.showAndroidTimeSelect();
+				});
+			})
+
+			function jsShowData() {
+				var v0 = document.getElementById("inputShipName").value;
+				var v1 = document.getElementById("inputTime").value;
+				var v2 = document.getElementById("inputAddress").value;
+				var v3 = document.getElementById("inputItem1").value;
+				var v4 = document.getElementById("inputItem2").value;
+				window.handler.showData(v0, v1, v2, v3, v4);
+			}
+		</script>
+</head>
+
+<body>
+
+<p style="line-height: 35px;"><input id="inputShipName" value="接受船旗" type="text" class="inputShipName"> 轮于
+	<input id="inputTime" type="text" class="inputTimeclass" readonly="readonly">在
+	<input id="inputAddress" type="text" class="inputAddress" maxlength="15">接受船旗国监督检查，共发现船舶
+	<input id="inputItem1" type="number" class="input">项，基中滞留缺陷
+	<input id="inputItem2" type="number" class="input"> 项。根据《中华人民共和国船舶安全监督规则》及有关规定， 现将该船检查情况予以通报，详见《船旗国监督检查报告》，请切实采取措施，加强管理，确保船舶良好的安全技术状况。
+</p>
+</body>
+
+</html>

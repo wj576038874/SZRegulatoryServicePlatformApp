@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/edit_bg"
+    android:gravity="center"
+    >
+    <TextView
+        android:background="@drawable/dialog_top_bg"
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:text="船舶类型"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:checked="true"
+            android:text="客船"
+            android:textSize="15sp"
+            android:background="@drawable/rd_btn_bg"
+            android:textColor="@drawable/rb_txt_bg"
+            android:button="@null"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="油船"
+            android:textSize="15sp"
+            android:background="@drawable/rd_btn_bg"
+            android:textColor="@drawable/rb_txt_bg"
+            android:button="@null"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="货船"
+            android:textSize="15sp"
+            android:background="@drawable/rd_btn_bg"
+            android:textColor="@drawable/rb_txt_bg"
+            android:button="@null"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="公务船"
+            android:background="@drawable/rd_btn_bg"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:button="@null"
+            android:layout_marginRight="10dp"
+            android:textColor="@drawable/rb_txt_bg"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="捕捞船"
+            android:background="@drawable/rd_btn_bg"
+            android:textColor="@drawable/rb_txt_bg"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:button="@null"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="其它"
+            android:background="@drawable/rd_btn_bg"
+            android:textColor="@drawable/rb_txt_bg"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:button="@null"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+
+    <LinearLayout
+        android:background="@drawable/dialog_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#B2B2B2"
+            ></View>
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_submit"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

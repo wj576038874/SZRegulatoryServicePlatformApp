@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:navigationIcon="@mipmap/back" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="巡航工作统计"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="#FFF"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="巡航时间："
+                    android:textSize="15sp"
+                    android:textColor="#333"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <EditText
+                        android:id="@+id/edt_year"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/table_edt_bg"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:focusable="false"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="年"
+                        android:textSize="15sp"
+                        android:textColor="#333"/>
+
+                    <EditText
+                        android:id="@+id/edt_month"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/table_edt_bg"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:focusable="false"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="月"
+                        android:textSize="15sp"
+                        android:textColor="#333"/>
+
+                    <EditText
+                        android:id="@+id/edt_day"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/table_edt_bg"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:focusable="false"
+                        android:textColorHint="#999"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="日"
+                        android:textSize="15sp"
+                        android:textColor="#333"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="星期一"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:visibility="invisible"
+                    android:textColor="#333"/>
+
+
+                <CheckBox
+                    android:id="@+id/ck_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="港区"
+                    android:textColor="#333"/>
+
+                <CheckBox
+                    android:id="@+id/ck_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="辖区"
+                    android:textColor="#333"/>
+
+                <CheckBox
+                    android:id="@+id/ck_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跨辖区"
+                    android:textColor="#333"/>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#999">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="气象"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edt_weather"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="海况"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_hk"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="巡航时间"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_xhsj"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:hint="点击选择时间段"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="巡航水域"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_xhsy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本次巡航工作统计"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="25sp"
+                android:gravity="center"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#999">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="一、巡航区域"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="二、巡航内容"
+                        android:textColor="#333"
+                        android:textSize="15sp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="施工作业"
+                        android:textColor="#333"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/edt_item_11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="涉嫌违法排放行为"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_21"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="重要航路"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="涉嫌违反航行规定行为"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_22"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="锚地"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="涉嫌违法施工作业行为"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_23"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="禁航禁锚区"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_14"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="涉嫌违法养殖、采砂行为"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_24"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="抛泥区"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_15"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="涉嫌违法排放行为"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_25"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="其它区"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="发现助航标志异常"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_26"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="其它"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_27"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="三、巡航时间(小时)"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_30"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:maxLength="5"
+                        android:inputType="numberDecimal"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="四、巡航里程(海里)"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_40"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:maxLength="5"
+                        android:inputType="numberDecimal"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="五、检查船舶(合计)"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_50"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:numeric="integer"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="六、检查航标(合计)"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_item_60"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:maxLength="5"
+                        android:numeric="integer"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:text="七、出动人员"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="0.5dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:minHeight="30dp"
+                            android:text="执法人员"
+                            android:textColor="#333"
+                            android:textSize="15sp"
+                             />
+
+                        <EditText
+                            android:id="@+id/edt_item_71"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/table_edt_bg"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:textColor="#333"
+                            android:maxLength="5"
+                            android:numeric="integer"
+                            android:textColorHint="#999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="0.5dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:minHeight="30dp"
+                            android:text="(人次)"
+                            android:textColor="#333"
+                            android:textSize="15sp"
+                             />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1.5"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="0.5dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:minHeight="30dp"
+                            android:text="其它人员"
+                            android:textColor="#333"
+                            android:textSize="15sp"
+                             />
+
+                        <EditText
+                            android:id="@+id/edt_item_72"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/table_edt_bg"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:textColor="#333"
+                            android:maxLength="5"
+                            android:numeric="integer"
+                            android:textColorHint="#999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="0.5dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:minHeight="30dp"
+                            android:text="(人次)"
+                            android:textColor="#333"
+                            android:textSize="15sp"
+                             />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:background="@color/tablebackground"
+                        android:gravity="center"
+                        android:text="施\n工\n作\n业"
+                        android:textColor="#333"
+                        android:textSize="15sp"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_outline"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:minHeight="300dp"
+                        android:textColor="#333"
+                        android:textColorHint="#999"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#999">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:background="@color/tablebackground"
+                    android:gravity="center"
+                    android:minHeight="30dp"
+                    android:text="时间"
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/tablebackground"
+                    android:gravity="center"
+                    android:minHeight="30dp"
+                    android:text="巡航纪要"
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    />
+
+            </TableRow>
+
+            <LinearLayout
+                android:id="@+id/layout_xhjy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/del_img"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/btn_add" />
+
+                <ImageView
+                    android:id="@+id/del_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/btn_delet" />
+
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:minHeight="30dp"
+                    android:text="巡航船舶："
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_shipname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_edt_bg"
+                    android:gravity="center"
+                    android:minHeight="30dp"
+                    android:layout_marginRight="50dp"
+                    android:textColor="#333"
+                    android:textColorHint="#999"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:minHeight="30dp"
+                    android:text="执法人员："
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_zfry"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/table_edt_bg"
+                    android:gravity="center"
+                    android:minHeight="30dp"
+                    android:textColor="#333"
+                    android:textColorHint="#999"
+                    android:textSize="15sp" />
+                
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_button_bg_blue"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

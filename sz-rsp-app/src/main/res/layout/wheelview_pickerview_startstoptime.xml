@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="40dp"
+    android:layout_marginLeft="40dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:background="@drawable/dialog_top_bg"
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:text="轨迹查询起止时间"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="开始时间"
+        android:textColor="#808080"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:id="@+id/timepicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/month"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/min"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="结束时间"
+        android:textColor="#808080"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:id="@+id/timepicker_stop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/year_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/month_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/day_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/hour_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.winfo.szrsp.app.widget.wheelview.lib.StartStopWheelView
+            android:id="@+id/min_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+       
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B2B2B2"
+        ></View>
+
+    <LinearLayout
+        android:background="@drawable/dialog_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:background="@color/translucent"
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#B2B2B2"
+            ></View>
+        <Button
+            android:background="@color/translucent"
+            android:id="@id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/pickerview_submit"
+            android:textColor="@drawable/selector_pickerminuteview_btn"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:hint="点击选择时间"
+        android:id="@+id/tv_syxh_time"
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textColor="#202020"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/table_waters_patrol_white_bg"/>
+    <EditText
+        android:id="@+id/edt_area"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textColor="#202020"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/table_waters_patrol_white_bg"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textColor="#202020"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/table_waters_patrol_white_bg">
+
+        <CheckBox
+            android:id="@+id/cb_isnormal_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="是"/>
+
+        <CheckBox
+            android:id="@+id/cb_isnormal_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="否"/>
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edt_exap"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="40dp"
+        android:textColor="#202020"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/table_waters_patrol_white_bg"/>
+</LinearLayout>

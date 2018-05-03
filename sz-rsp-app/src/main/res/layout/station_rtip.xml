@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tip"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_station_r_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="国家自动站"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_station_r_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_station_r_type"
+        android:gravity="center"
+        android:text="123456"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_station_r_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_station_r_number"
+        android:gravity="center"
+        android:text="经度:"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_station_r_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_station_r_lon"
+        android:gravity="center"
+        android:text="纬度:"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_station_r_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_station_r_lat"
+        android:gravity="center"
+        android:text="城市:"
+        android:textSize="12sp" />
+
+    <!-- <ImageView
+         android:id="@+id/imgbtn"
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_alignParentTop="true"
+         android:background="@drawable/tip_ocean"
+         android:layout_toRightOf="@+id/tv_station_r_type"
+         /> -->
+</RelativeLayout>

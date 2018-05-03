@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/msg_Relativelayout_msg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:background="@drawable/message_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/msg_LinearLayout_msg"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/message_title_bg"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/zhengshureason_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="处理意见"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/but_close"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/table_pop_cancel_btn"
+                android:src="@mipmap/network_error_close" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="00（无缺陷）"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/view_line_color" />
+
+                <CheckBox
+                    android:id="@+id/check_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="01（立即纠正）"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/view_line_color" />
+
+                <CheckBox
+                    android:id="@+id/check_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="02（装卸作业前纠正）"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/view_line_color" />
+
+                <CheckBox
+                    android:id="@+id/check_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="03（船舶开航前纠正）"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/view_line_color" />
+
+                <CheckBox
+                    android:id="@+id/check_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="04（尽快纠正）"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/view_line_color" />
+
+                <CheckBox
+                    android:id="@+id/check_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="05（其他文字说明）"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/edit_opinion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#edeef2"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:hint="请填写其他处理意见"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/msg_rl_operate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/msg_Relativelayout_msg_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/message_bg"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/but_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="#0091ff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

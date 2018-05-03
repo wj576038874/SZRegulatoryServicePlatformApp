@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="45dp">
+
+    <TextView
+        android:id="@+id/tv_ferryBoatName"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="渡口名称"
+        android:textColor="#333"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/iv_ferryboat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

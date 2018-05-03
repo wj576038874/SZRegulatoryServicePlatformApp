@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/xqdc_check_one_title"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="其他措施"
+                    android:textColor="#666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text="（适用的勾选，不适用不勾选）"
+                    android:textColor="#666"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:minHeight="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <CheckBox
+                    android:id="@+id/clcs_check_1"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="当场纠正"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/clcs_edt1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/personal_icon_arrow"
+                    android:gravity="right|center_vertical"
+                    android:hint="添加备注"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/view_line_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:minHeight="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <CheckBox
+                    android:id="@+id/clcs_check_2"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="立案行政处罚"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/clcs_edt2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/personal_icon_arrow"
+                    android:gravity="right|center_vertical"
+                    android:hint="添加备注"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/view_line_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:minHeight="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <CheckBox
+                    android:id="@+id/clcs_check_3"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="实施安全检查负责人"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/clcs_edt3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/personal_icon_arrow"
+                    android:gravity="right|center_vertical"
+                    android:hint="添加备注"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/view_line_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:minHeight="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <CheckBox
+                    android:id="@+id/clcs_check_4"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="行政强制"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/xzqz_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <com.winfo.szrsp.app.widget.FlowLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    f:horizontalSpacing="15dip"
+                    f:verticalSpacing="5dip">
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check1"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="责令改正"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check2"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="禁止离航"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check3"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="责令停航或停止作业"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check4"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="责令离岗"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check5"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="强制卸载"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/qtcs_check6"
+                        style="@style/CustomCheckboxTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="责令离岗"
+                        android:textColor="@color/black6"
+                        android:textSize="15sp" />
+
+                </com.winfo.szrsp.app.widget.FlowLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

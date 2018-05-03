@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eff0f4"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edit_bg">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_table_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="表格名称"
+                android:textColor="#333"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/center"
+            android:layout_below="@+id/top"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_table_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:maxEms="15"
+                android:text="船舶名称"
+                android:textColor="#666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:text="下载文档"
+                android:textColor="#0091ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_watch_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_download"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:text="查看文档"
+                android:textColor="#0091ff"
+                android:textSize="13sp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_below="@+id/center"
+            android:id="@+id/bar_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/progressbar_color"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

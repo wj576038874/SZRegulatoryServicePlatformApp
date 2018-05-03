@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- popwindow样式下拉菜单列表项布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:clickable="true"
+    >
+    <CheckedTextView
+        android:id="@+id/id_checkedTextView"
+        android:tag="tag1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/spinnerpop_normal_text_color"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        />
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/menu_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <LinearLayout
+        android:id="@+id/lay_cb"
+        android:layout_width="fill_parent"
+        android:background="@drawable/menu_btn_bg"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/id_btn_cb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/boat_choose"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:text="搜索船舶"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <ImageButton
+            android:id="@+id/img_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@mipmap/icon_thys_checked"
+            android:visibility="invisible"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#666666" />
+
+    <LinearLayout
+        android:id="@+id/lay_thys"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/menu_btn_bg"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/id_btn_thys"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/elect_choose"
+            android:text="搜索要素"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/img_thys"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@mipmap/icon_thys_checked"
+            android:visibility="invisible"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>

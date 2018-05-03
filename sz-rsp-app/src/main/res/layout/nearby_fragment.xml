@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/nearbyMore_titleBar"
+        layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/nearby_relayout_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/nearby_imgbtn_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_normal" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/nearserach_bg">
+
+            <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@mipmap/search_icon" />-->
+
+            <com.winfo.szrsp.app.widget.ClearEditText
+                android:id="@+id/nearby_et_search"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@mipmap/search"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="输入船名或者MMSI"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="14sp">
+
+                <requestFocus />
+            </com.winfo.szrsp.app.widget.ClearEditText>
+            <!--<EditText-->
+            <!--android:id="@+id/nearby_et_search"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:hint="搜索附近船舶"-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--android:maxLines="1"-->
+            <!--android:textColor="#999"-->
+            <!--android:textSize="16sp" />-->
+
+            <ImageButton
+                android:id="@+id/nearby_imgbtn_del"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/close_s"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/img_btn_change"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/biao_zhankai" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nearby_relayout_search_title">
+
+        <RelativeLayout
+            android:id="@+id/nearby_relayout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/nearby_linaer_thys"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nearby_search_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:id="@+id/elect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@mipmap/elect" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/elect"
+                        android:text="通航要素"
+                        android:textColor="@color/neaby_text_color"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/nearby_btn_thys_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@mipmap/icon_arrow"
+                        android:text="更多"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <com.winfo.szrsp.app.widget.NearbyGridView
+                    android:id="@+id/nearby_gv_thys"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:numColumns="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nearby_linaer_thys"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/nearby_search_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:id="@+id/boat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@mipmap/boat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/boat"
+                        android:text="附近船舶"
+                        android:textColor="@color/neaby_text_color"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/nearby_btn_boats_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@mipmap/icon_arrow"
+                        android:text="更多"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <com.winfo.szrsp.app.widget.NearbyGridView
+                    android:id="@+id/nearby_gv_boats"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:numColumns="3" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+
+        <include
+            android:id="@+id/nearby_net_data_load_faild"
+            layout="@layout/data_load_faild"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

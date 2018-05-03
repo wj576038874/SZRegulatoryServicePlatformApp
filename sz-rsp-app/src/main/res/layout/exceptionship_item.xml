@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <LinearLayout
+        android:paddingBottom="2dp"
+        android:id="@+id/gettask_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_border_normal">
+        <TextView
+            android:id="@+id/exceptionship_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="异常船舶名称"
+            android:textColor="#3288fe"
+            android:textSize="@dimen/title_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ececec" />
+
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标记异常时间："
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/exceptionship_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-07-07"
+                    android:textColor="#999"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="异常描述："
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/exceptionship_tv_dec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:text="任务任务任务任务任务任务任任务任务任务任务任务任务任务任务任务任务任务任务务任务任务任务任务任务"
+                    android:textColor="#999"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:id="@+id/btn_exception_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_button_bg_blue"
+            android:text="定位"
+            android:textColor="@color/white"
+            />
+
+        <!--<TextView
+            android:gravity="center"
+            android:id="@+id/btn_see_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/item_border_press"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="查看详情"
+            android:textColor="@color/blue" />-->
+    </LinearLayout>
+
+</LinearLayout>

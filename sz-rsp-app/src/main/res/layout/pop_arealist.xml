@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f4"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/id_btn_xqdc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="辖区渡船现场检查表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_xcjd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船舶现场监督报告"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_dxshc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="大型散货船检查表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_thsy"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="水上巡航表格"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_xhgz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="巡航工作记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_tzs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船旗国监督检查情况通知书"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cqgjdjcbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船旗国监督检查报告"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_psc_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="PSC"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_xhtj"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="巡航统计"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_dzxh_yc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="电子巡航异常"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cbwfxc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船舶危防现场监督检查记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cbzy_wxhw_xcjc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="舶载运集装箱危险货物/污染危害性货物现场检查记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cbzy_wxhw_kxjc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船舶载运危险货物/污染危害性货物集装箱开箱检查记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cbzy_pthw_kxjc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船舶载运普通货物集装箱开箱检查记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/view_line_color" />
+
+                <RadioButton
+                    android:id="@+id/id_btn_cbzy_zlyz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="船舶载运货物集装箱重量验证检查记录表"
+                    android:textColor="@color/color_radiobutton"
+                    android:textSize="15dp" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

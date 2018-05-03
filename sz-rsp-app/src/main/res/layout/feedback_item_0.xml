@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <LinearLayout
+        android:paddingBottom="1dp"
+        android:id="@+id/feedback_ll_title"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/item_border_normal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/feedback_iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/close_down"
+                />
+
+            <TextView
+                android:drawablePadding="3dp"
+                android:id="@+id/feedback_tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/feedback_iv_close"
+                android:gravity="center_vertical"
+                android:text="已处理"
+                android:drawableLeft="@mipmap/yichuli"
+                android:textColor="#60c073"
+                android:textSize="@dimen/medium_text_size" />
+            <TextView
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/feedback_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2017-07-07"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/feedback_tv_status"
+                android:textColor="#999"
+                android:textSize="@dimen/medium_text_size" />
+            <TextView
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/feedback_tv_time"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/feedback_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="安全检查"
+                android:maxLines="2"
+                android:ellipsize="start"
+                android:textColor="#3288fe"
+                android:textSize="@dimen/fifteen_text_size" />
+        </RelativeLayout>
+        <View
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:id="@+id/feedback_iv_line"
+            android:background="@color/view_line_color2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+    </LinearLayout>
+
+</LinearLayout>
